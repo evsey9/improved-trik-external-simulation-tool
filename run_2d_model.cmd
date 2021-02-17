@@ -20,12 +20,12 @@ for %%f in (*.%PROJECT_TYPE%) do (
 		echo "%%f"
 		"%TRIK_DIR%\patcher.exe" -f %%f "%DEFAULT_PROJECT%"
 		"%TRIK_DIR%\patcher.exe" -s "%mydir%\%2" "%DEFAULT_PROJECT%"
-		"%TRIK_DIR%\2D-model.exe" --mode script "%DEFAULT_PROJECT%"
+		"%TRIK_DIR%\2D-model.exe" --mode script "%DEFAULT_PROJECT%" --console
 	)
 	IF "%PROJECT_TYPE%"=="qrs" (
 		echo "%%f"
 		"%TRIK_DIR%\patcher.exe" -s "%mydir%\%2" %%f 
-		"%TRIK_DIR%\2D-model.exe" --mode script %%f
+		"%TRIK_DIR%\2D-model.exe" --mode script %%f --console
 	)
 )
 chcp %cp%>nul

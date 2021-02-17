@@ -18,12 +18,12 @@ do
 	then
 		$TRIK_DIR/patcher -f $f $DEFAULT_PROJECT
 		$TRIK_DIR/patcher -s $mydir/$2 $DEFAULT_PROJECT
-		$TRIK_DIR/2D-model --mode script $DEFAULT_PROJECT
+		$TRIK_DIR/2D-model --mode script $DEFAULT_PROJECT --console
 	fi
 	if [[ "$PROJECT_TYPE" == "qrs" ]];
 	then
 		$TRIK_DIR/bin/patcher -s $mydir/$2 $f
-		$TRIK_DIR/bin/2D-model --mode script $f
+		$TRIK_DIR/bin/2D-model --mode script $f --console
 	fi
 done
 rm lastCode.py
